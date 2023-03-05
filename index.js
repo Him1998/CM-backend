@@ -15,6 +15,8 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+mongoose.set('strictQuery', true)
+
 app.use("/contact", (req, res, next) => {
   const token = req.headers.authorization;
 
